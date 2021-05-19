@@ -169,6 +169,15 @@
 
 #define FILE_ATTRIBUTE_UNIX_MODE 0x80000000
 
+// Background Flags
+
+#define BG_DOWNLOAD 1                  // Plugin supports downloads in background
+
+#define BG_UPLOAD 2                    // Plugin supports uploads in background
+
+#define BG_ASK_USER 4                  // Plugin requires separate connection for background transfers -> ask user first
+
+
 typedef struct {
 
     DWORD SizeLow,SizeHigh;
@@ -261,6 +270,7 @@ int DCPCALL FsGetPreviewBitmapW(WCHAR* RemoteName,int width,int height,HBITMAP* 
 BOOL DCPCALL FsLinksToLocalFiles(void);
 BOOL DCPCALL FsGetLocalName(char* RemoteName,int maxlen);
 BOOL DCPCALL FsGetLocalNameW(WCHAR* RemoteName,int maxlen);
+int DCPCALL FsGetBackgroundFlags(void);
 
 #ifdef __cplusplus /* If this is a C++ compiler, end C linkage */
 }

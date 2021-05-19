@@ -115,9 +115,9 @@ std::string ServiceClient::get_oauth_token()
     return token;
 }
 
-std::__cxx11::string ServiceClient::url_encode(const std::__cxx11::string& s)
+std::string ServiceClient::url_encode(const std::string& s)
 {
-    std::__cxx11::string result;
+    std::string result;
 
     for (auto i = 0; s[i]; i++) {
         switch (s[i]) {

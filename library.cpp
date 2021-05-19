@@ -558,3 +558,7 @@ int DCPCALL FsExecuteFileW(HWND MainWin, WCHAR* RemoteName, WCHAR* Verb)
     return FS_EXEC_OK;
 }
 
+int DCPCALL FsGetBackgroundFlags(void)
+{
+    return BG_DOWNLOAD | BG_UPLOAD;
+}

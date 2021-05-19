@@ -65,7 +65,7 @@ protected:
     int m_auth_timeout;
     std::string m_client_id;
 
-    std::__cxx11::string url_encode(const std::__cxx11::string& s);
+    std::string url_encode(const std::string& s);
     int _get_port();
     int _get_auth_timeout();
     virtual std::string _get_client_id() { return m_client_id; };
